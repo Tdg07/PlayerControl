@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-    public GameObject player; 
+    public GameObject player;
+    private Vector3 offset = new Vector3(0, 5, -7);
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -11,9 +12,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        // Camera Offset
-        transform.position = player.transform.position + new Vector3(0, 5, -7);
+        transform.position = player.transform.position + offset; 
     }
 }
